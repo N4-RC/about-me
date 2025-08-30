@@ -3,48 +3,138 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ヨルシカ紹介サイト</title>
+<title>自分の自己紹介サイト</title>
 <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
-<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
 <header class="header">
-<nav class="nav">
-<ul>
-<li><a href="#about-me">自己紹介</a></li>
-<li><a href="#about-yorushika">ヨルシカとは</a></li>
-<li><a href="#favorite-songs">お気に入りの曲</a></li>
-</ul>
-</nav>
-<h1>わたしの好きなアーティスト「ヨルシカ」</h1>
+<div class="main-visual">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Yorushika_logo.svg/256px-Yorushika_logo.svg.png" alt="ヨルシカロゴ" class="main-logo">
+  <div class="main-copy">夜を駆ける、詩と音の物語</div>
+</div>
+<h1 class="site-title">自分の自己紹介サイト</h1>
 </header>
 <main>
 <section id="about-me">
 <h2>自己紹介</h2>
 <p>こんにちは、佐藤直輝です。音楽が大好きで、特にヨルシカをよく聴きます。気分転換や集中したいときに欠かせません。</p>
 </section>
+
+<section id="my-food">
+  <h2>今年食った食べ物</h2>
+  <div class="food-gallery" style="display:flex;gap:24px;flex-wrap:wrap;justify-content:flex-start;align-items:flex-start;">
+    <div style="text-align:center;max-width:180px;">
+      <img src="/image/Image (5).jpeg" alt="食べ物1" style="max-width:160px;width:100%;height:auto;border-radius:10px;box-shadow:0 2px 8px #0002;">
+      <div style="margin-top:8px;font-size:0.95em;color:#555;">ハンバーグ</div>
+    </div>
+    <div style="text-align:center;max-width:180px;">
+      <img src="/image/Image (3).jpeg" alt="食べ物2" style="max-width:160px;width:100%;height:auto;border-radius:10px;box-shadow:0 2px 8px #0002;">
+      <div style="margin-top:8px;font-size:0.95em;color:#555;">メロンパン</div>
+    </div>
+    <div style="text-align:center;max-width:180px;">
+      <img src="/image/Image (2).jpeg" alt="食べ物3" style="max-width:160px;width:100%;height:auto;border-radius:10px;box-shadow:0 2px 8px #0002;">
+      <div style="margin-top:8px;font-size:0.95em;color:#555;">刺身</div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<section id="my-trip">
+  <h2>今年行った旅行先</h2>
+  <div class="trip-photo">
+    <img src="/image/Image.jpeg" alt="常神島 無人島の写真" style="max-width:300px;width:100%;height:auto;border-radius:12px;box-shadow:0 4px 16px #0002;">
+    <p>福井県の常神島（無人島）。透明度の高い美しい海と自然に囲まれた場所です。</p>
+  </div>
+
+</section>
+
+<section id="anime-silent-witch">
+  <h2>アニメ「サイレントウィッチ」</h2>
+  <div class="anime-info">
+    <img src="https://silentwitch.net/assets2/img/visual_01/main_01_pc.jpg" alt="サイレントウィッチ メインビジュアル" style="max-width:400px;width:100%;height:auto;border-radius:12px;box-shadow:0 4px 16px #0002;margin-bottom:16px;">
+    <p>
+      「サイレントウィッチ」は、最強の魔女でありながら極度のコミュ障である少女モニカが主人公のファンタジーアニメです。<br>
+      魔法と成長、友情を描いた物語で、2024年にアニメ化されました。
+    </p>
+    <ul>
+      <li><a href="https://silentwitch-anime.com/" target="_blank" rel="noopener">公式サイト</a></li>
+      <li><a href="https://www.youtube.com/watch?v=6QnQwQkQ2nA" target="_blank" rel="noopener">PV（YouTube）</a></li>
+    </ul>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>お問い合わせ</h2>
+  <p>ご質問やご連絡は、下記メールアドレスまでお願いします。</p>
+  <ul>
+    <li>メール: <a href="mailto:your.email@example.com">your.email@example.com</a></li>
+  </ul>
+</section>
+
+<section id="favorite-games">
+<h2>好きなゲーム紹介</h2>
+  <ul class="game-list">
+    <li>
+      <img src="/image/Image (6).jpeg" alt="鳴潮キャラクターイラスト" style="max-width:220px;width:100%;height:auto;border-radius:12px;box-shadow:0 4px 16px #0002;margin-bottom:10px;display:block;">
+      <strong>鳴潮（Wuthering Waves）</strong><br>
+      <span class="game-desc">美しい世界観とアクション性の高いバトルが魅力のオープンワールドRPG。音楽やストーリーも素晴らしいです。</span><br>
+      <a href="https://wutheringwaves.kurogame.com/ja/" target="_blank" rel="noopener">公式サイト</a>
+    </li>
+  </ul>
+</section>
 <section id="about-yorushika">
 <h2>ヨルシカとは</h2>
 <p>
-
-        ヨルシカは日本の音楽ユニットで、コンポーザーのn-bunaさんとボーカルのsuisさんによって2017年に結成されました。
-
-        詩的な歌詞と透明感のある歌声、切ないメロディーが特徴です。
+  ヨルシカは日本の音楽ユニットで、コンポーザーのn-bunaさんとボーカルのsuisさんによって2017年に結成されました。
+  詩的な歌詞と透明感のある歌声、切ないメロディーが特徴です。
 </p>
+</section>
+<section id="about-silent-witch">
+  <h2>アニメ『サイレントウィッチ』紹介</h2>
+  <p>
+    『サイレントウィッチ』は、魔法と静寂をテーマにしたファンタジーアニメです。<br>
+    主人公モニカは“沈黙の魔女”と呼ばれ、圧倒的な魔法の才能を持ちながらも人前で話すのが苦手。<br>
+    彼女が仲間と共に成長し、さまざまな困難に立ち向かう姿が描かれます。<br>
+    繊細な心理描写や美しい映像、魅力的なキャラクターが見どころです。
+  </p>
+  <ul>
+    <li><a href="https://silentwitch-anime.com/" target="_blank" rel="noopener">公式サイト</a></li>
+    <li><a href="https://www.youtube.com/watch?v=Qv6QwQ1QwQw" target="_blank" rel="noopener">PVを見る（YouTube）</a></li>
+  </ul>
 </section>
 <section id="favorite-songs">
 <h2>ヨルシカの主な楽曲紹介</h2>
 <ul class="song-list">
-  <li><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Yorushika_logo.svg/64px-Yorushika_logo.svg.png" alt="icon" class="song-icon"> <a href="https://www.youtube.com/watch?v=KTZ-y85Erus" target="_blank" rel="noopener">だから僕は音楽を辞めた</a><br><span class="song-desc">音楽を辞めた理由と葛藤を描いた代表曲。アルバム「だから僕は音楽を辞めた」収録。</span></li>
-  <li><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Yorushika_logo.svg/64px-Yorushika_logo.svg.png" alt="icon" class="song-icon"> <a href="https://www.youtube.com/watch?v=1j3NF91FZLw" target="_blank" rel="noopener">ただ君に晴れ</a><br><span class="song-desc">爽やかなメロディと切ない歌詞が印象的な人気曲。</span></li>
-  <li><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Yorushika_logo.svg/64px-Yorushika_logo.svg.png" alt="icon" class="song-icon"> <a href="https://www.youtube.com/watch?v=1s84rIhPuhk" target="_blank" rel="noopener">藍二乗</a><br><span class="song-desc">青春の葛藤や想いを描いたエモーショナルな楽曲。</span></li>
-  <li><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Yorushika_logo.svg/64px-Yorushika_logo.svg.png" alt="icon" class="song-icon"> <a href="https://www.youtube.com/watch?v=1FliVTcX8bQ" target="_blank" rel="noopener">言って。</a><br><span class="song-desc">心の叫びをストレートに表現したバラード。</span></li>
-  <li><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Yorushika_logo.svg/64px-Yorushika_logo.svg.png" alt="icon" class="song-icon"> <a href="https://www.youtube.com/watch?v=1s84rIhPuhk" target="_blank" rel="noopener">ヒッチコック</a><br><span class="song-desc">人生の意味や日常の不安をテーマにした楽曲。</span></li>
-  <li><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Yorushika_logo.svg/64px-Yorushika_logo.svg.png" alt="icon" class="song-icon"> <a href="https://www.youtube.com/watch?v=9lVPAWLWtWc" target="_blank" rel="noopener">春泥棒</a><br><span class="song-desc">春の儚さと切なさを歌った名曲。</span></li>
-  <li><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Yorushika_logo.svg/64px-Yorushika_logo.svg.png" alt="icon" class="song-icon"> <a href="https://www.youtube.com/watch?v=1s84rIhPuhk" target="_blank" rel="noopener">花に亡霊</a><br><span class="song-desc">映画「泣きたい私は猫をかぶる」主題歌。美しいメロディが特徴。</span></li>
-  <li><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Yorushika_logo.svg/64px-Yorushika_logo.svg.png" alt="icon" class="song-icon"> <a href="https://www.youtube.com/watch?v=1s84rIhPuhk" target="_blank" rel="noopener">夜行</a><br><span class="song-desc">夜の情景と心情を描いた幻想的な楽曲。</span></li>
-  <li><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Yorushika_logo.svg/64px-Yorushika_logo.svg.png" alt="icon" class="song-icon"> <a href="https://www.youtube.com/watch?v=1s84rIhPuhk" target="_blank" rel="noopener">パレード</a><br><span class="song-desc">疾走感のあるサウンドと前向きな歌詞が魅力。</span></li>
-  <li><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Yorushika_logo.svg/64px-Yorushika_logo.svg.png" alt="icon" class="song-icon"> <a href="https://www.youtube.com/watch?v=1s84rIhPuhk" target="_blank" rel="noopener">エルマ</a><br><span class="song-desc">物語性の強いアルバム「エルマ」の表題曲。</span></li>
+  <li>
+    <img src="https://spice.eplus.jp/images/B0ZQfB7CaLskOK1KVJB3Rc3baRjpOwQgp8xqKNbj0IjkIeTA3c631sNc2GAK8bYB" alt="だから僕は音楽を辞めた" class="song-icon" onclick="toggleSongDesc(this)">
+    <span class="song-title"><a href="https://www.youtube.com/watch?v=KTZ-y85Erus" target="_blank" rel="noopener">だから僕は音楽を辞めた</a></span><br>
+    <span class="song-desc">音楽を辞めた理由と葛藤を描いた代表曲。アルバム「だから僕は音楽を辞めた」収録。</span>
+  </li>
+  <li><a href="detail_tadakimi.html"><img src="https://nicetossy.com/wp-content/uploads/2020/05/c3407adc22c754d4ad8b5ee33fb6b3b0.jpg" alt="ただ君に晴れ" class="song-icon" onclick="toggleSongDesc(this)"></a> <span class="song-title"><a href="https://www.youtube.com/watch?v=1j3NF91FZLw" target="_blank" rel="noopener">ただ君に晴れ</a></span><br><span class="song-desc">爽やかなメロディと切ない歌詞が印象的な人気曲。</span></li>
+  <li><a href="detail_ai.html"><img src="https://i1.sndcdn.com/artworks-000464076819-xca6vs-t500x500.jpg" alt="藍二乗" class="song-icon" onclick="toggleSongDesc(this)"></a> <span class="song-title"><a href="https://www.youtube.com/watch?v=1s84rIhPuhk" target="_blank" rel="noopener">藍二乗</a></span><br><span class="song-desc">青春の葛藤や想いを描いたエモーショナルな楽曲。</span></li>
+  <li><a href="detail_itte.html"><img src="https://i1.sndcdn.com/artworks-000324183400-swo2tq-t500x500.jpg" alt="言って。" class="song-icon" onclick="toggleSongDesc(this)"></a> <span class="song-title"><a href="https://www.youtube.com/watch?v=1FliVTcX8bQ" target="_blank" rel="noopener">言って。</a></span><br><span class="song-desc">心の叫びをストレートに表現したバラード。</span></li>
+  <li><a href="detail_hitchcock.html"><img src="http://rocklyric.jp/newsimage/FullSize/13459.jpg" alt="ヒッチコック" class="song-icon" onclick="toggleSongDesc(this)"></a> <span class="song-title"><a href="https://www.youtube.com/watch?v=1s84rIhPuhk" target="_blank" rel="noopener">ヒッチコック</a></span><br><span class="song-desc">人生の意味や日常の不安をテーマにした楽曲。</span></li>
+  <li><a href="detail_harudorobo.html"><img src="https://cgworld.jp/feature/images/interview/202103-yorushika/07.jpg" alt="春泥棒" class="song-icon" onclick="toggleSongDesc(this)"></a> <span class="song-title"><a href="https://www.youtube.com/watch?v=9lVPAWLWtWc" target="_blank" rel="noopener">春泥棒</a></span><br><span class="song-desc">春の儚さと切なさを歌った名曲。</span></li>
+  <li><a href="detail_hananibourei.html"><img src="https://i.ytimg.com/vi/9lVPAWLWtWc/maxresdefault.jpg" alt="花に亡霊" class="song-icon" onclick="toggleSongDesc(this)"></a> <span class="song-title"><a href="https://www.youtube.com/watch?v=1s84rIhPuhk" target="_blank" rel="noopener">花に亡霊</a></span><br><span class="song-desc">映画「泣きたい私は猫をかぶる」主題歌。美しいメロディが特徴。</span></li>
+  <li><a href="detail_yakou.html"><img src="http://colorido.co.jp/wp-content/uploads/2020/03/cb65bded867ed46c1bb6c48627d86f31.jpg" alt="夜行" class="song-icon" onclick="toggleSongDesc(this)"></a> <span class="song-title"><a href="https://www.youtube.com/watch?v=1s84rIhPuhk" target="_blank" rel="noopener">夜行</a></span><br><span class="song-desc">夜の情景と心情を描いた幻想的な楽曲。</span></li>
+  <li><a href="detail_parade.html"><img src="https://i0.wp.com/saluteproject.com/wp-content/uploads/2019/03/OwUIkx87wBNrsplkCPcSE32Z23YRLvanNWQqhtWUCqQZmHXRaeRffXTIC7XfZzOR.jpg?fit=2532%2C1422&ssl=1" alt="パレード" class="song-icon" onclick="toggleSongDesc(this)"></a> <span class="song-title"><a href="https://www.youtube.com/watch?v=1s84rIhPuhk" target="_blank" rel="noopener">パレード</a></span><br><span class="song-desc">疾走感のあるサウンドと前向きな歌詞が魅力。</span></li>
+  <li><a href="detail_elma.html"><img src="https://img.youtube.com/vi/PWbRleMGagU/maxresdefault.jpg" alt="エルマ" class="song-icon" onclick="toggleSongDesc(this)"></a> <span class="song-title"><a href="https://www.youtube.com/watch?v=1s84rIhPuhk" target="_blank" rel="noopener">エルマ</a></span><br><span class="song-desc">物語性の強いアルバム「エルマ」の表題曲。</span></li>
+</ul>
+<script>
+function toggleSongDesc(img) {
+  const desc = img.closest('li').querySelector('.song-desc');
+  if (desc) {
+    desc.style.display = (desc.style.display === 'block') ? 'none' : 'block';
+  }
+}
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.song-desc').forEach(function(el) {
+    el.style.display = 'none';
+  });
+});
+</script>
 </ul>
 </section>
 </main>

@@ -1,0 +1,84 @@
+/* --- ヨルシカ公式サイト風 強化テーマ --- */
+body {
+  font-family: 'Noto Sans JP', 'Hiragino Sans', 'Meiryo', 'Montserrat', 'Segoe UI', sans-serif;
+  background: linear-gradient(120deg, #e3e9f7 0%, #f5f7fa 60%, #eaf6f6 100%);
+  color: #222;
+  margin: 0;
+  min-height: 100vh;
+  letter-spacing: 0.03em;
+  position: relative;
+}
+
+main {
+  max-width: 820px;
+  margin: 2.5em auto 2em auto;
+  background: rgba(255,255,255,0.92);
+  border-radius: 22px;
+  box-shadow: 0 8px 32px rgba(30,40,80,0.10);
+  padding: 2.7em 2.2em 2.2em 2.2em;
+  border: 1.5px solid #e3e9f7;
+  backdrop-filter: blur(2.5px);
+}
+
+.song-list li {
+  margin-bottom: 2em;
+  display: flex;
+  align-items: flex-start;
+  background: linear-gradient(100deg, #f5f7fa 60%, #e3e9f7 100%);
+  border-radius: 18px;
+  box-shadow: 0 2px 12px rgba(30,40,80,0.07);
+  padding: 1.2em 1.2em 1.2em 1em;
+  transition: box-shadow 0.25s, transform 0.18s, background 0.25s;
+  border: 1px solid #e3e9f7;
+}
+.song-list li:hover {
+  box-shadow: 0 8px 32px #7ed6df33;
+  background: linear-gradient(100deg, #eaf6f6 60%, #f5f7fa 100%);
+  transform: translateY(-2px) scale(1.015);
+}
+.song-title {
+  font-weight: bold;
+  font-size: 1.18em;
+  color: #4e6ee7;
+  margin-bottom: 0.2em;
+  display: inline-block;
+  letter-spacing: 0.04em;
+  text-shadow: 0 2px 8px #e3e9f7;
+}
+.song-icon {
+  width: 38px;
+  height: 38px;
+  margin-right: 0.9em;
+  flex-shrink: 0;
+  filter: drop-shadow(0 2px 8px #7ed6df88);
+  border-radius: 50%;
+  background: #fff;
+}
+.song-desc {
+  display: block;
+  color: #3a3a3a;
+  font-size: 1em;
+  margin-top: 0.2em;
+  line-height: 1.7;
+}
+
+/* 公式サイト風の全体リンク装飾 */
+a {
+  color: #4e6ee7;
+  text-decoration: none;
+  transition: color 0.18s, text-shadow 0.18s;
+}
+a:hover {
+  color: #7ed6df;
+  text-shadow: 0 2px 12px #7ed6df55;
+  text-decoration: underline;
+}
+
+/* 追加: 公式サイト風のアニメーション */
+.main-logo {
+  animation: logo-fadein 1.2s cubic-bezier(.4,0,.2,1);
+}
+@keyframes logo-fadein {
+  0% { opacity: 0; transform: scale(0.8) translateY(30px); }
+  100% { opacity: 1; transform: scale(1) translateY(0); }
+}

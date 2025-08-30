@@ -1,12 +1,200 @@
+/* --- ヨルシカ公式サイト風 mainビジュアル・タイトル --- */
+.main-visual {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2.5em;
+  margin-top: 1.5em;
+}
+.main-logo {
+  width: 160px;
+  height: 160px;
+  filter: drop-shadow(0 8px 32px #7ed6df55);
+  margin-bottom: 0.7em;
+}
+.main-copy {
+  font-size: 1.35em;
+  color: #4e6ee7;
+  letter-spacing: 0.12em;
+  font-weight: 600;
+  margin-bottom: 0.7em;
+  text-shadow: 0 2px 12px #e3e9f7;
+}
+.site-title {
+  text-align: center;
+  font-size: 2.5em;
+  font-weight: 800;
+  color: #2d3a6c;
+  margin: 0 0 2.5em 0;
+  letter-spacing: 0.08em;
+  background: linear-gradient(90deg, #4e6ee7 30%, #7ed6df 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 4px 24px #e3e9f7;
+}
+.header {
+  background: linear-gradient(120deg, #e3e9f7 0%, #f5f7fa 60%, #eaf6f6 100%);
+  padding: 2.5em 0 1.5em 0;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(30,40,80,0.07);
+  position: relative;
+  overflow: hidden;
+}
+.header::after {
+  content: "";
+  position: absolute;
+  right: -60px;
+  top: -40px;
+  width: 180px;
+  height: 180px;
+  background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Yorushika_logo.svg/180px-Yorushika_logo.svg.png') no-repeat center center/contain;
+  opacity: 0.08;
+  pointer-events: none;
+}
+.header h1 {
+  font-size: 2.3em;
+  letter-spacing: 0.08em;
+  color: #2d3a6c;
+  margin: 0.5em 0 0 0;
+  font-weight: 700;
+  text-shadow: 0 2px 8px rgba(30,40,80,0.08);
+  background: linear-gradient(90deg, #4e6ee7 30%, #7ed6df 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.header h1 img {
+  filter: drop-shadow(0 2px 8px #7ed6df88);
+}
+.nav a {
+  color: #2d3a6c;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1em;
+  transition: color 0.2s;
+  letter-spacing: 0.04em;
+}
+.nav a:hover {
+  color: #7ed6df;
+  text-decoration: underline;
+}
+main {
+  max-width: 800px;
+  margin: 2.5em auto 2em auto;
+  background: rgba(255,255,255,0.97);
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(30,40,80,0.08);
+  padding: 2.5em 2em 2em 2em;
+  border: 1.5px solid #e3e9f7;
+}
+h2 {
+  color: #4e6ee7;
+  font-size: 1.4em;
+  border-left: 5px solid #7ed6df;
+  padding-left: 0.5em;
+  margin-top: 2em;
+  background: linear-gradient(90deg, #e3e9f7 60%, #f5f7fa 100%);
+  border-radius: 6px;
+}
+.footer {
+  text-align: center;
+  color: #888;
+  font-size: 0.95em;
+  padding: 2em 0 1em 0;
+  background: none;
+}
+/* --- ヨルシカ紹介サイト TOPページ用追加スタイル --- */
+body {
+  font-family: 'Noto Sans JP', 'Hiragino Sans', 'Meiryo', sans-serif;
+  background-color: #f5f7fa;
+  color: #222;
+  margin: 0;
+}
+.header {
+  background: linear-gradient(90deg, #e3e9f7 0%, #f5f7fa 100%);
+  padding: 2.5em 0 1.5em 0;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(30,40,80,0.07);
+}
+.header h1 {
+  font-size: 2.2em;
+  letter-spacing: 0.08em;
+  color: #2d3a6c;
+  margin: 0.5em 0 0 0;
+  font-weight: 700;
+  text-shadow: 0 2px 8px rgba(30,40,80,0.08);
+}
+.nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+  padding: 0;
+  margin: 0 0 1.2em 0;
+  list-style: none;
+}
+.nav a {
+  color: #2d3a6c;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1em;
+  transition: color 0.2s;
+}
+.nav a:hover {
+  color: #4e6ee7;
+  text-decoration: underline;
+}
+main {
+  max-width: 800px;
+  margin: 2.5em auto 2em auto;
+  background: rgba(255,255,255,0.95);
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(30,40,80,0.08);
+  padding: 2.5em 2em 2em 2em;
+}
+h2 {
+  color: #4e6ee7;
+  font-size: 1.4em;
+  border-left: 5px solid #4e6ee7;
+  padding-left: 0.5em;
+  margin-top: 2em;
+}
+.footer {
+  text-align: center;
+  color: #888;
+  font-size: 0.95em;
+  padding: 2em 0 1em 0;
+  background: none;
+}
 /* 楽曲リスト用のアイコンと説明文のスタイル */
 .song-list {
   list-style: none;
   padding: 0;
 }
 .song-list li {
-  margin-bottom: 1.5em;
+  margin-bottom: 2em;
   display: flex;
   align-items: flex-start;
+  background: rgba(255,255,255,0.7);
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  padding: 1em;
+  transition: box-shadow 0.2s;
+}
+.song-list li:hover {
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+  background: rgba(255,255,255,0.95);
+}
+.song-list li:not(:last-child) {
+  margin-bottom: 2em;
+}
+.song-title {
+  font-weight: bold;
+  font-size: 1.15em;
+  color: #1a237e;
+  margin-bottom: 0.2em;
+  display: inline-block;
 }
 .song-icon {
   width: 32px;
@@ -25,10 +213,8 @@ body::before {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Yorushika_logo.svg/1024px-Yorushika_logo.svg.png') repeat;
-  background-size: 200px 200px;
-  opacity: 0.05; /* 透明度 */
-  z-index: -1;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(120deg, #e3e9f7 0%, #f5f7fa 60%, #eaf6f6 100%);
+  z-index: -2;
 }
