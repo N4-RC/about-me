@@ -86,6 +86,15 @@
   opacity: 0;
   transition: opacity 0.5s ease-in;
 }
+
+/* 初期状態でローディング画面を確実に表示 */
+body {
+  overflow: hidden;
+}
+
+body.loaded {
+  overflow: auto;
+}
 </style>
 </head>
 <body>
@@ -246,14 +255,6 @@
     </div>
   </li>
 </ul>
-<script>
-function toggleSongDesc(img) {
-  const desc = img.parentNode.querySelector('.song-desc');
-  if (desc) {
-    desc.style.display = (desc.style.display === 'block') ? 'none' : 'block';
-  }
-}
-</script>
 </section>
 </main>
 <footer class="footer">
@@ -270,15 +271,26 @@ function toggleSongDesc(img) {
 }
 
 // ローディング画面の制御
-window.addEventListener('load', function() {
+document.addEventListener('DOMContentLoaded', function() {
   const loadingScreen = document.getElementById('loading-screen');
   const mainContent = document.getElementById('main-content');
   
-  // 2.5秒後にローディング画面をフェードアウト
-  setTimeout(function() {
-    loadingScreen.classList.add('fade-out');
-    mainContent.style.opacity = '1';
-  }, 2500);
+  // 画像の読み込み完了を待つ
+  const loadingImage = document.getElementById('loading-image');
+  
+  loadingImage.onload = function() {
+    // 画像が読み込まれてから3秒後にローディング画面をフェードアウト
+    setTimeout(function() {
+      loadingScreen.classList.add('fade-out');
+      mainContent.style.opacity = '1';
+      document.body.classList.add('loaded');
+    }, 3000);
+  };
+  
+  // 画像がキャッシュされていて既に読み込まれている場合
+  if (loadingImage.complete) {
+    loadingImage.onload();
+  }
 });
 </script>
 </body>
