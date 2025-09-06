@@ -5,9 +5,86 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>自分の自己紹介サイト</title>
 <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
-<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="../css/styles.css">
+<style>
+/* ローディング画面のスタイル */
+#loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(120deg, #e3e9f7 0%, #f5f7fa 60%, #eaf6f6 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition: opacity 0.5s ease-out;
+}
+
+#loading-image {
+  max-width: 300px;
+  width: 80%;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+  animation: fadeInScale 1.5s ease-out;
+}
+
+#loading-text {
+  font-size: 1.2em;
+  color: #4e6ee7;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+  margin-top: 25px;
+  text-shadow: 0 2px 12px #e3e9f7;
+  animation: fadeIn 2s ease-out 0.5s both;
+  text-align: center;
+}
+
+@keyframes fadeInScale {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-out {
+  opacity: 0;
+  pointer-events: none;
+}
+
+#main-content {
+  opacity: 0;
+  transition: opacity 0.5s ease-in;
+}
+</style>
 </head>
 <body>
+<!-- ローディング画面 -->
+<div id="loading-screen">
+  <img id="loading-image" src="image/image(8).jpeg" alt="ローディング画像">
+  <div id="loading-text">ページを読み込んでいます...</div>
+</div>
+
+<!-- メインコンテンツ -->
+<div id="main-content">
 <header class="header">
 <div class="main-visual">
   <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Yorushika_logo.svg/256px-Yorushika_logo.svg.png" alt="ヨルシカロゴ" class="main-logo">
@@ -25,15 +102,15 @@
   <h2>今年食った食べ物</h2>
   <div class="food-gallery" style="display:flex;gap:24px;flex-wrap:wrap;justify-content:flex-start;align-items:flex-start;">
     <div style="text-align:center;max-width:180px;">
-      <img src="image/Image%20(5).jpeg" alt="食べ物1" style="max-width:160px;width:100%;height:auto;border-radius:10px;box-shadow:0 2px 8px #0002;">
+      <img src="/image/Image (5).jpeg" alt="食べ物1" style="max-width:160px;width:100%;height:auto;border-radius:10px;box-shadow:0 2px 8px #0002;">
       <div style="margin-top:8px;font-size:0.95em;color:#555;">ハンバーグ</div>
     </div>
     <div style="text-align:center;max-width:180px;">
-      <img src="image/Image%20(3).jpeg" alt="食べ物2" style="max-width:160px;width:100%;height:auto;border-radius:10px;box-shadow:0 2px 8px #0002;">
+      <img src="/image/Image (3).jpeg" alt="食べ物2" style="max-width:160px;width:100%;height:auto;border-radius:10px;box-shadow:0 2px 8px #0002;">
       <div style="margin-top:8px;font-size:0.95em;color:#555;">メロンパン</div>
     </div>
     <div style="text-align:center;max-width:180px;">
-      <img src="image/Image%20(2).jpeg" alt="食べ物3" style="max-width:160px;width:100%;height:auto;border-radius:10px;box-shadow:0 2px 8px #0002;">
+      <img src="/image/Image (2).jpeg" alt="食べ物3" style="max-width:160px;width:100%;height:auto;border-radius:10px;box-shadow:0 2px 8px #0002;">
       <div style="margin-top:8px;font-size:0.95em;color:#555;">刺身</div>
     </div>
   </div>
@@ -44,7 +121,7 @@
 <section id="my-trip">
   <h2>今年行った旅行先</h2>
   <div class="trip-photo">
-    <img src="image/Image.jpeg" alt="常神島 無人島の写真" style="max-width:300px;width:100%;height:auto;border-radius:12px;box-shadow:0 4px 16px #0002;">
+    <img src="/image/Image.jpeg" alt="常神島 無人島の写真" style="max-width:300px;width:100%;height:auto;border-radius:12px;box-shadow:0 4px 16px #0002;">
     <p>福井県の常神島（無人島）。透明度の高い美しい海と自然に囲まれた場所です。</p>
   </div>
 
@@ -53,7 +130,7 @@
 <section id="my-childhood-photo">
   <h2>小さい頃の写真</h2>
   <div style="text-align:center;margin:24px 0;">
-    <img src="image/Image%20(7).jpeg" alt="小さい頃の写真" style="max-width:320px;width:100%;height:auto;border-radius:14px;box-shadow:0 4px 16px #0002;">
+    <img src="/image/Image (7).jpeg" alt="小さい頃の写真" style="max-width:320px;width:100%;height:auto;border-radius:14px;box-shadow:0 4px 16px #0002;">
   </div>
 </section>
 
@@ -69,7 +146,7 @@
 <h2>好きなゲーム紹介</h2>
   <ul class="game-list">
     <li>
-      <img src="image/Image%20(6).jpeg" alt="鳴潮キャラクターイラスト" style="max-width:220px;width:100%;height:auto;border-radius:12px;box-shadow:0 4px 16px #0002;margin-bottom:10px;display:block;">
+      <img src="/image/Image (6).jpeg" alt="鳴潮キャラクターイラスト" style="max-width:220px;width:100%;height:auto;border-radius:12px;box-shadow:0 4px 16px #0002;margin-bottom:10px;display:block;">
       <strong>鳴潮（Wuthering Waves）</strong><br>
       <span class="game-desc">美しい世界観とアクション性の高いバトルが魅力のオープンワールドRPG。音楽やストーリーも素晴らしいです。</span><br>
       <a href="https://wutheringwaves.kurogame.com/ja/" target="_blank" rel="noopener">公式サイト</a>
@@ -170,6 +247,28 @@ function toggleSongDesc(img) {
 <footer class="footer">
 <p>&copy; 2024 わたしのヨルシカ紹介サイト</p>
 </footer>
+</div>
+
+<script>
+function toggleSongDesc(img) {
+  const desc = img.parentNode.querySelector('.song-desc');
+  if (desc) {
+    desc.style.display = (desc.style.display === 'block') ? 'none' : 'block';
+  }
+}
+
+// ローディング画面の制御
+window.addEventListener('load', function() {
+  const loadingScreen = document.getElementById('loading-screen');
+  const mainContent = document.getElementById('main-content');
+  
+  // 2.5秒後にローディング画面をフェードアウト
+  setTimeout(function() {
+    loadingScreen.classList.add('fade-out');
+    mainContent.style.opacity = '1';
+  }, 2500);
+});
+</script>
 </body>
 </html>
 
