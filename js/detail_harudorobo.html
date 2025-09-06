@@ -19,10 +19,16 @@
   </header>
   <main>
     <section style="text-align:center; margin-top:2em;">
-      <img src="https://img.youtube.com/vi/9lVPAWLWtWc/maxresdefault.jpg" alt="春泥棒MVサムネイル" style="width:320px;max-width:90%;border-radius:18px;box-shadow:0 4px 24px #7ed6df33;">
-      <p class="song-desc" style="font-size:1.1em;margin:1.5em 0 0.5em 0;">春の訪れと別れをテーマにした、ヨルシカらしい透明感あふれる楽曲。<br>切ないメロディと詩的な歌詞が心に残ります。</p>
+      <img src="https://img.youtube.com/vi/9lVPAWLWtWc/maxresdefault.jpg" alt="春泥棒MVサムネイル" style="width:320px;max-width:90%;border-radius:18px;box-shadow:0 4px 24px #7ed6df33;cursor:pointer;" id="song-icon" onclick="toggleDesc()">
+      <p class="song-desc" id="song-desc" style="font-size:1.1em;margin:1.5em 0 0.5em 0;display:none;">春の訪れと別れをテーマにした、ヨルシカらしい透明感あふれる楽曲。<br>切ないメロディと詩的な歌詞が心に残ります。</p>
       <p><a href="https://www.youtube.com/watch?v=9lVPAWLWtWc" target="_blank" rel="noopener" style="color:#4e6ee7;font-weight:bold;">YouTubeで聴く</a></p>
     </section>
+    <script>
+    function toggleDesc() {
+      var desc = document.getElementById('song-desc');
+      desc.style.display = (desc.style.display === 'block') ? 'none' : 'block';
+    }
+    </script>
   </main>
 </body>
 </html>
